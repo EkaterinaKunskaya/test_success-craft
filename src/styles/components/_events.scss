@@ -1,0 +1,41 @@
+.events {
+    padding: 0 2rem;
+
+    &__content {
+        @include flex(row, space-between, center);
+        gap: 1.19rem;
+
+        @media(max-width: $desktop-l) {
+            @include flex(column, space-between, center);
+            gap: 2rem;
+        }
+
+        .event {
+            @include flex(row, space-between, center);
+            min-width: 50%;
+
+            @media(max-width: $desktop-xl) {
+                min-width: 45%;
+            }
+
+            &__text {
+                @include flex(column, space-between, flex-start);
+                padding: 1.65rem 1.3rem;
+            }
+
+            img {
+                @media(max-width: $desktop-xxl) {
+                    width: 50%;
+                }
+
+                @media(max-width: $desktop-l) {
+                    border-radius: 1rem;
+                }
+
+                @media(max-width: $mobile-xxsm) {
+                    display: none;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,94 @@
+.contact {
+    background-color: $white-color;
+    padding: 0 3.5rem 3.69rem 3.5rem;
+
+    @media(max-width: $tablet-md) {
+        padding: 0 20% 3.69rem 20%;
+    }
+
+    @media(max-width: $mobile-sm) {
+        padding: 0 5% 3.69rem 5%;
+    }
+
+    &__content {
+        @include flex(column, space-between, space-between);
+
+        h3 {
+            margin-bottom: 3.2rem;
+        }
+
+        .form {
+            &__fields {
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                gap: 1rem .9rem;
+                justify-items: stretch;
+
+                @media(max-width: $tablet-xlg) {
+                    grid-template-columns: repeat(2, 1fr);
+                    gap: 1rem 10%;
+                }
+
+                @media(max-width: $tablet-lg) {
+                    gap: 1rem 5%;
+                }
+
+                @media(max-width: $tablet-md) {
+                    grid-template-columns: repeat(1, 1fr);
+                    gap: 1.5rem;
+                }
+            }
+    
+            &__field {
+                @include flex(column, space-between, flex-start);
+                
+                .label {
+                    @include font('GothicRegular', 1rem, $gray-dim-color);
+                    line-height: 1.5rem;
+                    margin-bottom: .37rem;
+                    
+                    label {
+                        margin-right: .4rem;
+                    }
+                }
+    
+                .input {
+                    @include font('GothicRegular', 1rem, $gray-dim-color);
+                    width: 100%;
+                    height: 2.5rem;
+                    border-radius: 0.625rem;
+                    background-color: $white-smoke-color;
+                    outline: none;
+                    border: none;
+                    padding: .5rem .69rem;
+                    margin-bottom: .37rem;
+    
+                    &::placeholder {
+                        @include font('GothicRegular', 1rem, $gray-silver-color);
+                        text-transform: capitalize;
+                    }
+    
+                    &:active,
+                    &:focus,
+                    &:hover {
+                        border: 1px solid $blue-sky-color;
+                    }
+    
+                    &-error {
+                        border: 1px solid $red-color;
+                    }
+                }
+
+                .error-message {
+                    @include font('GothicRegular', .8rem, $red-color);
+                    height: .5rem;
+                }
+            }
+
+            .btn-wrapper {
+                @include flex(row, center, center);
+                margin-top: 2rem;
+            }
+        }
+    }
+}

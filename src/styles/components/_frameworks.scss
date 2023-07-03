@@ -1,0 +1,67 @@
+.frameworks {
+    background-color: $white-ghost-color;
+    padding: 3.5rem 2rem 3.81rem 2rem;
+
+    &__content {
+
+        h3 {
+            margin-bottom: 2.81rem;
+        }
+
+        .cards {
+            @include flex(column, center, center);
+            gap: 2.8rem;
+    
+            .card {
+                @include flex(row, space-between, flex-start);
+                max-width: 75rem;
+                border-radius: .5rem;
+                background: $white-color;
+                gap: 4%;
+                overflow: hidden;
+
+                @media(max-width: $desktop-xxl) {
+                    max-width: 100%;
+                }
+
+                @media(max-width: $desktop-l) {
+                    @include flex(row, space-between, center);
+                    gap: 0;
+                }
+    
+                &__text {
+                    padding: 1.69rem 1.6rem;
+                    min-width: 30%;
+
+                    p {
+                        @media(max-width: $mobile-xxsm) {
+                            text-align: left;
+                        }
+                    }
+
+                    .btns-wrapper {
+                        @include flex(row, flex-start, center);
+                        gap: 1.56rem;
+                        margin-top: 15%;
+
+                        @media(max-width: $desktop-l) {
+                            margin-top: 0;
+                        }
+                    }
+                }
+
+                img {
+                    @media(max-width: $desktop-l) {
+                        width: 40%;
+                        border-radius: 1rem;
+                        padding: 1%;
+                    }
+
+                    @media(max-width: $tablet-md) {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}

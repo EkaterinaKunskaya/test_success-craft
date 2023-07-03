@@ -1,0 +1,8 @@
+.footer {
+    @include flex(row, center, center);
+    height: 13.5%;
+    flex: 0 0 auto;
+    color: $white-color;
+    line-height: 1rem;
+    background-color: $gray-dim-color;
+}

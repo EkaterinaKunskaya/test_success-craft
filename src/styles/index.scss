@@ -1,0 +1,17 @@
+@import './abstracts/colors';
+@import './abstracts/mixins';
+@import './abstracts/breakpoints';
+
+@import './base/normalize';
+@import './base/fonts';
+@import './base/base';
+
+@import './components/header';
+@import './components/burger';
+@import './components/preview';
+@import './components/about';
+@import './components/frameworks';
+@import './components/events';
+@import './components/applications';
+@import './components/contact';
+@import './components/footer';

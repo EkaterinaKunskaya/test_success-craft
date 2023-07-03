@@ -1,0 +1,72 @@
+.applications {
+    background-color: $white-ghost-color;
+    padding: 3rem 2rem 3.5rem 2rem;
+    margin-bottom: 3.5rem;
+
+    @media(max-width: $mobile-sm) {
+        padding: 3rem 4rem 3.5rem 4rem;
+    }
+
+    &__content {
+        @include flex(column, space-between, space-between);
+
+        h3 {
+            margin-bottom: 2.81rem;
+        }
+    }
+
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 2.8rem 9%;
+        justify-content: space-between;
+        justify-items: stretch;
+
+        
+        @media(max-width: $desktop-xl) {
+            gap: 2rem 5%;
+        }
+
+        @media(max-width: $desktop-l) {
+            gap: 2rem 2%;
+        }
+
+        @media(max-width: $tablet-md) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @media(max-width: $mobile-sm) {
+            grid-template-columns: repeat(1, 1fr);
+        }
+
+        .application {
+            @include flex(column, space-between, center);
+            background-color: $gray-dim-color;
+            cursor: pointer;
+
+            &:hover {
+                filter: brightness(150%);
+            }
+
+            img {
+                width: 100%;
+                height: 75%;
+            }
+
+            p {
+                margin: 0;
+                color: $white-color;
+                padding: .4rem 0;
+
+                @media(max-width: $tablet-md) {
+                    font-size: 1.5rem;
+                    padding: 1rem 0;
+                }
+
+                @media(max-width: $mobile-sm) {
+                    padding: 1.3rem 0;
+                }
+            }
+        }
+    }
+}

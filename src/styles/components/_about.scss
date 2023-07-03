@@ -1,0 +1,84 @@
+.about {
+    @include flex(column, center, center);
+    height:70vh;
+    background-image: url('@/assets/images/about-section-bg.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 0 2.5rem;
+
+    @media(max-width: $desktop-l) {
+        height:80vh;
+    }
+
+    
+    &__content {
+        @include flex(row, space-between, center);
+
+        @media(max-width: $desktop-l) {
+            @include flex(column, space-between, center);
+        }
+    }
+
+    &__text {
+
+        @media(max-width: $desktop-l) {
+            @include flex(column, space-between, center);
+            margin-top: 1rem;
+        }
+        
+        h3 {
+            text-align: start;
+        }
+
+        p {
+            margin-bottom: 3rem;
+
+            @media(max-width: $desktop-l) {
+                text-align: center;
+                margin-bottom: 1rem;
+            }
+        }
+
+        .btns-wrapper {
+            @include flex(row, flex-start, center);
+            gap: 1.44rem;
+
+            @media(max-width: $mobile-xxsm) {
+                @include flex(column, center, center);
+            }
+        }
+    }
+
+    &__video {
+        padding: 2.6rem;
+
+        @media(max-width: $mobile-xxsm) {
+            padding: 1rem;
+        }
+
+        iframe {
+            width: 555px;
+            height: 320px;
+
+            @media(max-width: $desktop-xl) {
+                width: 455px;
+                height: 250px;
+            }
+
+            @media(max-width: $desktop-l) {
+                width: 555px;
+                height: 320px;
+            }
+
+            @media(max-width: $tablet-md) {
+                width: 455px;
+                height: 250px;
+            }
+
+            @media(max-width: $mobile-xxsm) {
+                width: 250px;
+                height: 150px;
+            }
+        }
+    }
+}

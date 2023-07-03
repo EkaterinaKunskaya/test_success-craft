@@ -1,0 +1,52 @@
+.header {
+    @include flex(row, space-between, center);
+    flex: 0 0 auto;
+    background-color: $white-color;
+    height: 5.3rem;
+
+    &__content {
+        @include flex(row, space-between, center);
+
+        .logo {
+            width: 13rem;
+            margin-left: 2%;
+
+            @media(max-width: $desktop-l) {
+                width: 10rem;
+            }
+
+            @media(max-width: $tablet-xlg) {
+                margin-right: 2%;
+            }
+
+            @media(max-width: $mobile-xxsm) {
+                margin-right: 5%;
+            }
+        }
+    
+        .navbar {
+            @media(max-width: $tablet-xlg) {
+                display: none;
+            }
+
+            &__list {
+                @include flex(row, space-between, center);
+                gap: 2.8rem;
+            }
+    
+            &__link {
+                @include font('RobotoRegular', 1.125rem, $gray-dim-color);
+                text-transform: uppercase;
+
+                @media(max-width: $desktop-l) {
+                    font-size: 1rem;
+                }
+    
+                &:active,
+                &:hover {
+                    color: $blue-sky-color;
+                }
+            }
+        }
+    }
+}
