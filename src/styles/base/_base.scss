@@ -53,7 +53,7 @@ h1, h2, h3, h4, h5, h6 {
     @include font('GothicBold', 1.75rem, $gray-dim-color);
     text-align: center;
 
-    @media(max-width: $mobile-xxsm) {
+    @media(max-width: $mobile-xsm) {
         font-size: 1.5rem;
     }
 }
@@ -61,7 +61,7 @@ h1, h2, h3, h4, h5, h6 {
 .subtitle {
     @include font('GothicBold', 1.5rem, $gray-dim-color);
 
-    @media(max-width: $mobile-xxsm) {
+    @media(max-width: $mobile-xsm) {
         font-size: 1rem;
     }
 }
@@ -71,7 +71,7 @@ h1, h2, h3, h4, h5, h6 {
     line-height: 1.625rem;
     text-align: justify;
 
-    @media(max-width: $mobile-xxsm) {
+    @media(max-width: $mobile-xsm) {
         font-size: .9rem;
     }
 }

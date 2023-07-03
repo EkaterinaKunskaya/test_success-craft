@@ -14,7 +14,7 @@
         height: 60vh;
     }
 
-    @media(max-width: $mobile-xxsm) {
+    @media(max-width: $mobile-xsm) {
         height: 40vh;
     }
 
@@ -32,7 +32,7 @@
         }
 
         
-        @media(max-width: $mobile-xxsm) {
+        @media(max-width: $mobile-xsm) {
             font-size: 1.5rem;
         }
     }

@@ -43,7 +43,7 @@
             @include flex(row, flex-start, center);
             gap: 1.44rem;
 
-            @media(max-width: $mobile-xxsm) {
+            @media(max-width: $mobile-xsm) {
                 @include flex(column, center, center);
             }
         }
@@ -52,7 +52,7 @@
     &__video {
         padding: 2.6rem;
 
-        @media(max-width: $mobile-xxsm) {
+        @media(max-width: $mobile-xsm) {
             padding: 1rem;
         }
 
@@ -75,7 +75,7 @@
                 height: 250px;
             }
 
-            @media(max-width: $mobile-xxsm) {
+            @media(max-width: $mobile-xsm) {
                 width: 250px;
                 height: 150px;
             }
